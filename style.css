@@ -3,17 +3,17 @@
 @tailwind utilities;
 @font-face {
     font-family: "Gilroy-extrabold";
-    src: url("assets/font/Gilroy-FREE/Gilroy-FREE/Gilroy-ExtraBold.otf");
+    src: url("./assets/font/Gilroy-FREE/Gilroy-FREE/Gilroy-ExtraBold.otf");
 }
 
 @font-face {
     font-family: "Gilroy-light";
-    src: url("assets/font/Gilroy-FREE/Gilroy-FREE/Gilroy-Light.otf");
+    src: url("./assets/font/Gilroy-FREE/Gilroy-FREE/Gilroy-Light.otf");
 }
 
 @font-face {
     font-family: "Monotype-Corsiva";
-    src: url("assets/font/monotype-corsiva/Monotype/Corsiva.ttf");
+    src: url("./assets/font/monotype-corsiva/Monotype/Corsiva.ttf");
 }
 
 @media only screen and (min-width: 1259px) {
@@ -46,7 +46,7 @@
 
 @media only screen and (min-width: 768px) and (max-width: 1258px) {
     .bg-page1-isiundangan {
-        background-image: url('assets/page-1.jpeg');
+        background-image: url('./assets/page-1.jpeg');
         background-position: 100% 100vh;
         /* background-size: cover;
         background-repeat: no-repeat; */
@@ -63,7 +63,7 @@
 
 @media only screen and (min-width: 640px)and (max-width: 767px) {
     .bg-page1-isiundangan {
-        background-image: url('assets/page-1.jpeg');
+        background-image: url('./assets/page-1.jpeg');
         background-position: 35% 100vh;
         /* background-size: cover;
         background-repeat: no-repeat; */
@@ -80,7 +80,7 @@
 
 @media only screen and (min-width: 300px) and (max-width: 639px) {
     .bg-page1-isiundangan {
-        background-image: url('assets/page-1.jpeg');
+        background-image: url('./assets/page-1.jpeg');
         background-position: 37% 100vh;
         /* background-size: cover;
         background-repeat: no-repeat; */
@@ -105,12 +105,12 @@ label {
 } */
 
 .bg-dunes {
-    background-image: url('assets/background/bg-page1.jpeg');
+    background-image: url('./assets/background/bg-page1.jpeg');
 }
 
 
 /* .bg-page1-isiundangan {
-    background-image: url('assets/page-1.jpeg');
+    background-image: url('./assets/page-1.jpeg');
     background-position: 35% 100vh;
   
 } */
@@ -124,31 +124,31 @@ label {
 }
 
 .bg-page-3 {
-    background-image: url('assets/background/bg-page2.jpg');
+    background-image: url('./assets/background/bg-page2.jpg');
 }
 
 .bg-page-4 {
-    background-image: url('assets/foto-mempelai/collect-1.jpeg');
+    background-image: url('./assets/foto-mempelai/collect-1.jpeg');
     background-size: cover;
     background-position: center center;
 }
 
 .bg-page-4-1 {
-    background-image: url('assets/foto-mempelai/collect-2.jpeg');
+    background-image: url('./assets/foto-mempelai/collect-2.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 }
 
 .bg-page-4-2 {
-    background-image: url('assets/foto-mempelai/collect-3.jpeg');
+    background-image: url('./assets/foto-mempelai/collect-3.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 }
 
 .bg-page-4-3 {
-    background-image: url('assets/foto-mempelai/collect-4.jpeg');
+    background-image: url('./assets/foto-mempelai/collect-4.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
