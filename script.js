@@ -1,12 +1,11 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js";
 import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-database.js";
 
-const audio = document.querySelector("#audio-wedding");
-// function playAudio() {
-// const audio = new Audio("23255679_happy-wedding_by_2bstudio_preview.mp3");
 
-audio.play();
-audio.loop = true;
+
+
+
+//----------------page 2--------------------------
 // The data/time we want to countdown to
 var countDownDate = new Date("Aug 06, 2022 11:00:00").getTime();
 
@@ -62,23 +61,113 @@ document.getElementById('frmPesan').addEventListener('submit', function(e) {
     // alert('Your form is submitted');
     document.getElementById('frmPesan').reset();
 });
-
+// document.getElementById("test").innerHTML = "adf";
 // read data from firebase
+let width = screen.width;
+console.log(width);
+let pesans_m = document.getElementById('ucp-user-m');
+let pesans = document.getElementById('ucp-user');
 const dbRef = ref(getDatabase(app));
 get(child(dbRef, 'users/')).then((snapshot) => {
     if (snapshot.exists()) {
 
         Object.keys(snapshot.val()).forEach((key) => {
+
+            let divElement = document.createElement("div");
+            // divElement.classList.add("flex", "flex-col", "pb-1")
+            divElement.innerHTML =
+                ` <div class="pt-1 flex flex-col ">
+                <label class="text-sm sm:text-2xl text-center font-gilroy_light" style="font-weight: 600;" for="">${snapshot.val()[key].nama} :</label>
+                <label class="text-sm sm:text-2xl text-center font-gilroy_light" style="font-weight: 500;" for="">${snapshot.val()[key].pesan}</label>
+            </div>`;
             console.log(`nama: ${snapshot.val()[key].nama}`);
             console.log(`Pesan: ${snapshot.val()[key].pesan}`);
+            if (width > 640) {
+                pesans.appendChild(divElement);
 
+            }
+            if (width < 640) {
+                pesans_m.appendChild(divElement);
+
+            }
         });
+
     } else {
         console.log("No data available");
     }
 }).catch((error) => {
     console.error(error);
 });
+
+
+localStorage.setItem("audio", "true");
+let triggerMusic;
+let audio = document.querySelector("#audio-wedding");
+
+if (localStorage.getItem("audio") != null) { triggerMusic = localStorage.getItem("audio"); } else {
+    triggerMusic = "true";
+}
+
+if (width > 640) {
+    document.querySelector("#btn-audio-wedding").addEventListener('click', function() {
+        console.log("trigger");
+        console.log(triggerMusic);
+        triggerMusic = localStorage.getItem("audio");
+        if (triggerMusic == "true") {
+
+            playAudio();
+
+        } else {
+            pauseAudio();
+        }
+    });
+} else {
+    document.querySelector("#btn-audio-wedding-m").addEventListener('click', function() {
+        console.log("trigger");
+        console.log(triggerMusic);
+        triggerMusic = localStorage.getItem("audio");
+        if (triggerMusic == "true") {
+
+            playAudio();
+
+        } else {
+            pauseAudio();
+        }
+    });
+}
+
+
+if (triggerMusic == "true") {
+    playAudio();
+
+} else {
+    pauseAudio();
+}
+
+
+
+
+
+
+function playAudio() {
+    // const audio = new Audio("23255679_happy-wedding_by_2bstudio_preview.mp3");
+    audio.loop = true;
+    audio.play();
+    localStorage.setItem("audio", "false");
+    // document.getElementById("icon-music").src = "./assets/icon/valume.png";
+    // document.getElementById("icon-music").createElement("IMG").setAttribute(setAttribute("src", "./assets/icon/valume.png"));
+    // document.getElementById("icon-music").setAttribute("src", "./assets/icon/valume.png");
+}
+
+function pauseAudio() {
+    console.log("pause");
+    audio.pause();
+    localStorage.setItem("audio", "true");
+    // document.getElementById("icon-music").createElement("IMG").setAttribute(setAttribute("src", "./assets/icon/valume.png"));
+    // document.getElementById("icon-music").setAttribute("src", "./assets/icon/valume.png");
+    // document.getElementById("icon-music").setAttribute("src", "./assets/icon/silent.png");
+    // document.getElementById("icon-music").src = "./assets/icon/silent.png";
+}
 
 
 
