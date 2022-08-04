@@ -55,14 +55,14 @@
 </head>
 
 <body>
-    <section class=" flex flex-col items-center justify-center w-full h-screen bg-dunes bg-cover bg-center">
+    <section class=" flex sm:hidden flex-col items-center justify-center w-full h-screen bg-dunes bg-cover bg-center">
 
-        <div class=" bg-black bg-opacity-25 rounded-lg w-1/2 h-12 sm:w-1/2 h-40 md:w-1/2 md:h-60 lg:w-2/3 lg:h-3/6 lg:rounded-3xl">
+        <div class=" bg-black bg-opacity-25 rounded-lg w-10/12 h-12 sm:w-1/2 h-40 md:w-1/2 md:h-60 lg:w-2/3 lg:h-3/6 lg:rounded-3xl">
 
             <div class=" font-gilroy_light isolate bg-white bg-opacity-75 rounded-lg w-11/12 h-100 lg:rounded-3xl ml-[-20] mt-[-30] h-25 flex items-strech justify-center">
                 <div class="isolate mr-[-50]  grid grid-rows-3 items-center justify-contet-center">
                     <label class=" text-[15px] align-middle justify-self-center text-sm sm:text-lg md:text-2xl lg:text-4xl font-medium">The Wedding Off</label>
-                    <label class=" font-monotype_corsiva justify-self-center text-3xl sm:text-4xl md:text-5xl lg:text-9xl m-0">Suci & Subhan</label>
+                    <label class=" font-great-vibes justify-self-center text-3xl sm:text-4xl md:text-5xl lg:text-9xl m-0" style="font-family: Great-Vibes;">Suci & Subkhi</label>
                     <label class=" justify-self-center text-xs sm:text-sm md:text-md lg:text-4xl text-black font-medium">6 Agusutus 2022</label>
                 </div>
 
@@ -72,7 +72,52 @@
 
         </div>
 
-        <a href="isi-undangan.html" class="bg-red-600   text-white bg-opacity-75 hover:bg-red-600  p-4 sm:p-3  rounded-2xl items-center justify-center">
+
+        <a id="btn-open-undangan" href="isi-undangan.html" class="bg-red-600   text-white bg-opacity-75 hover:bg-red-600  p-3 mb-3   rounded-2xl items-center justify-center">
+            <label class="font-gilroy_light align-middle text-xs  isolate">Buka Undangan</label>
+        </a>
+
+        <div class="h-22 w-1/2 rounded-2xl bg-white bg-opacity-75 p-3 font-gilroy_light flex flex-col justify-center">
+            <label class="text sm" style="font-family: Gilroy-light;font-weight: 600;" for="">To:</label>
+            <label class="text-sm" style="font-family: Gilroy-light;font-weight: 600" id="kepada" for=""></label>
+        </div>
+
+
+
+
+
+
+        <!-- <div class=" bg-red-700 opacity-50 hover:bg-red-700 text-white font-bold py-2 px-4 rounded ">
+
+
+        </div> -->
+
+
+
+
+    </section>
+    <section class="hidden sm:flex flex-col items-center justify-center w-full h-screen bg-dunes bg-cover bg-center">
+
+        <div class=" bg-black bg-opacity-25 rounded-lg w-1/2 h-12 sm:w-1/2 h-40 md:w-1/2 md:h-60 lg:w-2/3 lg:h-3/6 lg:rounded-3xl">
+
+            <div class=" font-gilroy_light isolate bg-white bg-opacity-75 rounded-lg w-11/12 h-100 lg:rounded-3xl ml-[-20] mt-[-30] h-25 flex items-strech justify-center">
+                <div class="isolate mr-[-50]  grid grid-rows-3 items-center justify-contet-center">
+                    <label class=" text-[15px] align-middle justify-self-center text-sm sm:text-lg md:text-2xl lg:text-4xl font-medium">The Wedding Off</label>
+                    <label style="font-family: Great-Vibes;" class="  justify-self-center text-3xl sm:text-4xl md:text-5xl lg:text-9xl m-0">Suci & Subkhi</label>
+                    <label class=" justify-self-center text-xs sm:text-sm md:text-md lg:text-4xl text-black font-medium">6 Agusutus 2022</label>
+                </div>
+
+            </div>
+
+
+
+        </div>
+        <!-- <div class="h-100 w-20">
+            <label for="">Kepada Yth:</label>
+            <label id="kepada" for=""></label>
+        </div> -->
+
+        <a id="btn-open-undangan" href="isi-undangan.html" class="bg-red-600   text-white bg-opacity-75 hover:bg-red-600  p-4 sm:p-3  rounded-2xl items-center justify-center">
             <label class="font-gilroy_light align-middle text-xs sm:text-sm md:text-md lg:text-4xl isolate">Buka Undangan</label>
         </a>
 
@@ -92,7 +137,7 @@
     </section>
 
 
-
+    <script type="module" src="script-one.js"></script>
 </body>
 
 </html>
