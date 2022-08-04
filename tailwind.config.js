@@ -42,6 +42,7 @@ module.exports = {
             gilroy_extrabold: ["Gilroy-extrabold"],
             gilroy_light: ["Gilroy-light"],
             monotype_corsiva: ["Monotype-Corsiva"],
+            great_vibes: ["Great-Vibes"],
         },
         colors: {
             'clifford': '#da373d',
